@@ -36,7 +36,8 @@ CHECKPOINT_MODELS=(
 )
 
 LORA_MODELS=(
-    #"https://civitai.com/api/download/models/16576"
+    "https://huggingface.co/MomlessTomato/sdxl-shioriko-mifune/blob/main/id_shioriko_mifune.safetensors"
+    "https://huggingface.co/MomlessTomato/sdxl-maki-nishikino/resolve/main/id_maki_nishikino.safetensors"
 )
 
 VAE_MODELS=(
