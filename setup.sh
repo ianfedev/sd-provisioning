@@ -19,9 +19,6 @@ PIP_PACKAGES=(
 
 EXTENSIONS=(
     "https://github.com/Mikubill/sd-webui-controlnet"
-    "https://github.com/d8ahazard/sd_dreambooth_extension"
-    "https://github.com/deforum-art/sd-webui-deforum"
-    "https://github.com/adieyal/sd-dynamic-prompts"
     "https://github.com/ototadana/sd-face-editor"
     "https://github.com/Bing-su/adetailer"
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
