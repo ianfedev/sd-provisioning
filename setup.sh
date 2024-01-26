@@ -25,6 +25,7 @@ EXTENSIONS=(
     "https://github.com/Coyote-A/ultimate-upscale-for-automatic1111"
     "https://github.com/fkunn1326/openpose-editor"
     "https://github.com/Gourieff/sd-webui-reactor"
+    "https://github.com/hnmr293/sd-webui-cutoff"
 )
 
 CHECKPOINT_MODELS=(
@@ -33,8 +34,8 @@ CHECKPOINT_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/sdxl-shioriko-mifune/resolve/main/id_shioriko_mifune.safetensors"
-    "https://huggingface.co/MomlessTomato/sdxl-maki-nishikino/resolve/main/id_maki_nishikino.safetensors"
+    "https://huggingface.co/MomlessTomato/sdxl-maki-nishikino/blob/main/id_maki_nishikino_sdxl.safetensors"
+    "https://huggingface.co/MomlessTomato/sdxl-shioriko-mifune/resolve/main/id_shioriko_mifune_sdxl.safetensors"
 )
 
 VAE_MODELS=(
@@ -48,7 +49,8 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
-    ""
+    "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors"
+    "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors"
 )
 
 
