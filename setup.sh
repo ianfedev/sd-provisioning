@@ -20,7 +20,6 @@ PIP_PACKAGES=(
 EXTENSIONS=(
     "https://github.com/Mikubill/sd-webui-controlnet"
     "https://github.com/ototadana/sd-face-editor"
-    "https://github.com/Bing-su/adetailer"
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
     "https://github.com/Coyote-A/ultimate-upscale-for-automatic1111"
     "https://github.com/fkunn1326/openpose-editor"
