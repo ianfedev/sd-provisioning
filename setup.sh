@@ -18,18 +18,18 @@ PIP_PACKAGES=(
   )
 
 EXTENSIONS=(
+    "https://github.com/Mikubill/sd-webui-controlnet"
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
     "https://github.com/hnmr293/sd-webui-cutoff"
 )
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/cagliostrolab/animagine-xl-3.0/resolve/main/animagine-xl-3.0.safetensors"
-    "https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/sdxl-maki-nishikino/blob/main/id_maki_nishikino_sdxl.safetensors"
-    "https://huggingface.co/MomlessTomato/sdxl-shioriko-mifune/blob/main/id_shioriko_mifune_sdxl.safetensors"
+    "https://huggingface.co/MomlessTomato/sdxl-maki-nishikino/resolve/main/id_maki_nishikino_sdxl.safetensors"
+    "https://huggingface.co/MomlessTomato/sdxl-shioriko-mifune/resolve/main/id_shioriko_mifune_sdxl.safetensors"
 )
 
 VAE_MODELS=(
@@ -43,6 +43,8 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
+    "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors"
+    "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors"
 )
 
 
