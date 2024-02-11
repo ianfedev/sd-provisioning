@@ -22,6 +22,7 @@ EXTENSIONS=(
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
     "https://github.com/hnmr293/sd-webui-cutoff"
     "https://github.com/Bing-su/adetailer"
+    "https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor"
 )
 
 CHECKPOINT_MODELS=(
