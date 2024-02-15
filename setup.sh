@@ -31,9 +31,6 @@ CHECKPOINT_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/sdxl-maki-nishikino/resolve/main/id_umi_sonoda.safetensors"
-    "https://huggingface.co/MomlessTomato/sdxl-maki-nishikino/resolve/main/id_nozomi_tojo.safetensors"
-    "https://huggingface.co/MomlessTomato/sdxl-maki-nishikino/resolve/main/id_rin_hoshizora.safetensors"
 )
 
 VAE_MODELS=(
