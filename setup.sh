@@ -27,11 +27,12 @@ EXTENSIONS=(
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/cagliostrolab/animagine-xl-3.0/resolve/main/animagine-xl-3.0.safetensors"
-    "https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/sdxl-maki-nishikino/resolve/main/id_kotori_minami.safetensors"
+    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_hanamaru_kunikida-000016.safetensors"
+    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_ruby_kurosawa-000014.safetensors"
+    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_yoshiko_tsushima-000015.safetensors"
 )
 
 VAE_MODELS=(
