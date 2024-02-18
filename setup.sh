@@ -30,9 +30,15 @@ CHECKPOINT_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_hanamaru_kunikida-000016.safetensors"
-    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_ruby_kurosawa-000014.safetensors"
-    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_yoshiko_tsushima-000015.safetensors"
+    "https://huggingface.co/theidoldaily/maki-nishikino/resolve/main/id_maki_nishikino.safetensors"
+    "https://huggingface.co/theidoldaily/rin-hoshizora/resolve/main/id_rin_hoshizora.safetensors"
+    "https://huggingface.co/theidoldaily/hanayo-koizumi/resolve/main/id_hanayo_koizumi.safetensors"
+    "https://huggingface.co/theidoldaily/umi-sonoda/resolve/main/id_umi_sonoda.safetensors"
+    "https://huggingface.co/theidoldaily/honoka-kosaka/resolve/main/id_honoka_kosaka.safetensors"
+    "https://huggingface.co/theidoldaily/kotori-minami/resolve/main/id_kotori_minami.safetensors"
+    "https://huggingface.co/theidoldaily/nico-yazawa/resolve/main/id_nico_yazawa.safetensors"
+    "https://huggingface.co/theidoldaily/eli-ayase/resolve/main/id_eli_ayase.safetensors"
+    "https://huggingface.co/theidoldaily/nozomi-tojo/resolve/main/id_nozomi_tojo.safetensors"
 )
 
 VAE_MODELS=(
