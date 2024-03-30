@@ -31,7 +31,7 @@ CHECKPOINT_MODELS=(
 
 LORA_MODELS=(
     "https://huggingface.co/MomlessTomato/aqours/resolve/main/great_lighting.safetensors"
-    "https://huggingface.co/MomlessTomato/aqours/resolve/main/great_lighting.safetensors"
+    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_dia_kurosawa.safetensors"
 )
 
 VAE_MODELS=(
