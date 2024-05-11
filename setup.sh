@@ -27,8 +27,8 @@ EXTENSIONS=(
 )
 
 CHECKPOINT_MODELS=(
-    "https://huggingface.co/cagliostrolab/animagine-xl-3.0/resolve/main/animagine-xl-3.0.safetensors"
     "https://huggingface.co/stablediffusionapi/realism-engine-sdxl-v30/blob/main/vae/diffusion_pytorch_model.bin"
+    "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
 )
 
 LORA_MODELS=(
