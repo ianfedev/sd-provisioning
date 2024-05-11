@@ -23,10 +23,12 @@ EXTENSIONS=(
     "https://github.com/hnmr293/sd-webui-cutoff"
     "https://github.com/Bing-su/adetailer"
     "https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor"
+    "https://github.com/John-WL/sd-webui-inpaint-background"
 )
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/cagliostrolab/animagine-xl-3.0/resolve/main/animagine-xl-3.0.safetensors"
+    "https://huggingface.co/stablediffusionapi/realism-engine-sdxl-v30/blob/main/vae/diffusion_pytorch_model.bin"
 )
 
 LORA_MODELS=(
@@ -37,6 +39,7 @@ LORA_MODELS=(
 
 VAE_MODELS=(
     "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
+    "https://huggingface.co/stablediffusionapi/realism-engine-sdxl-v30/blob/main/vae/diffusion_pytorch_model.bin"
 )
 
 ESRGAN_MODELS=(
