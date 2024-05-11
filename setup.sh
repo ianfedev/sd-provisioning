@@ -32,9 +32,6 @@ CHECKPOINT_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/aqours/resolve/main/great_lighting.safetensors"
-    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_chika_takami.safetensors"
-    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_riko_sakurauchi.safetensors"
 )
 
 VAE_MODELS=(
