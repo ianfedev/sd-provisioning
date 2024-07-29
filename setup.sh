@@ -32,6 +32,7 @@ CHECKPOINT_MODELS=(
 )
 
 LORA_MODELS=(
+    "https://huggingface.co/theidoldaily/maki-nishikino/resolve/main/id_maki_nishikino.safetensors"
 )
 
 VAE_MODELS=(
