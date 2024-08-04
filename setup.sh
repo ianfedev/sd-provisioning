@@ -21,9 +21,7 @@ EXTENSIONS=(
     "https://github.com/Mikubill/sd-webui-controlnet"
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
     "https://github.com/hnmr293/sd-webui-cutoff"
-    "https://github.com/Bing-su/adetailer"
     "https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor"
-    "https://github.com/John-WL/sd-webui-inpaint-background"
 )
 
 CHECKPOINT_MODELS=(
