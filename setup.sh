@@ -30,7 +30,10 @@ CHECKPOINT_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_heanna_sumire.safetensors"
+    "https://huggingface.co/theidoldaily/maki-nishikino/resolve/main/id_maki_nishikino.safetensors"
+    "https://huggingface.co/MomlessTomato/aqours/resolve/main/great_lighting.safetensors"
+    "https://huggingface.co/MomlessTomato/aqours/resolve/main/reflector.safetensors"
+    "https://huggingface.co/MomlessTomato/aqours/resolve/main/openxl_handsfix.safetensors"
 )
 
 VAE_MODELS=(
