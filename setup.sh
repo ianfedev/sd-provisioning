@@ -30,7 +30,7 @@ CHECKPOINT_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/theidoldaily/rin-hoshizora/resolve/main/id_rin_hoshizora.safetensors"
+    "https://huggingface.co/theidoldaily/umi-sonoda/resolve/main/id_umi_sonoda.safetensors"
     "https://huggingface.co/MomlessTomato/aqours/resolve/main/great_lighting.safetensors"
     "https://huggingface.co/MomlessTomato/aqours/resolve/main/openxl_handsfix.safetensors"
     "https://huggingface.co/MomlessTomato/aqours/resolve/main/hand.safetensors"
