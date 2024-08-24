@@ -30,9 +30,7 @@ CHECKPOINT_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_mari_ohara.safetensors"
-    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_riko_sakurauchi.safetensors"
-    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_ruby_kurosawa.safetensors"
+    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_ai_miyashita_NOERRASE.safetensors"
     "https://huggingface.co/MomlessTomato/aqours/resolve/main/great_lighting.safetensors"
     "https://huggingface.co/MomlessTomato/aqours/resolve/main/openxl_handsfix.safetensors"
     "https://huggingface.co/MomlessTomato/aqours/resolve/main/hand.safetensors"
