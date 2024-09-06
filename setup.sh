@@ -30,7 +30,7 @@ CHECKPOINT_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/aqours/resolve/main/id_mari_ohara.safetensors"
+    "https://huggingface.co/theidoldaily/maki-nishikino/resolve/main/id_maki_nishikino.safetensors"
     "https://huggingface.co/MomlessTomato/aqours/resolve/main/great_lighting.safetensors"
     "https://huggingface.co/MomlessTomato/aqours/resolve/main/openxl_handsfix.safetensors"
     "https://huggingface.co/MomlessTomato/aqours/resolve/main/hand.safetensors"
@@ -50,6 +50,7 @@ ESRGAN_MODELS=(
 CONTROLNET_MODELS=(
     "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors"
     "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors"
+    "https://huggingface.co/h94/IP-Adapter/blob/main/sdxl_models/ip-adapter_sdxl.safetensors"
 )
 
 
