@@ -50,6 +50,7 @@ function provisioning_start() {
 
     # Start and exit because webui will probably require a restart
     cd "${A1111_DIR}"
+    git checkout dev
     LD_PRELOAD=libtcmalloc_minimal.so.4 \
         python launch.py \
             --skip-python-version-check \
