@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source /venv/main/bin/activate
-A1111_DIR=${WORKSPACE}/stable-diffusion-webui
+COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
 # Packages are installed after nodes so we can fix them...
 
@@ -11,6 +11,16 @@ APT_PACKAGES=(
 )
 
 PIP_PACKAGES=(
+    #"package-1"
+    #"package-2"
+)
+
+NODES=(
+    #"https://github.com/ltdrdata/ComfyUI-Manager"
+    #"https://github.com/cubiq/ComfyUI_essentials"
+)
+
+WORKFLOWS=(
 
 )
 
@@ -39,28 +49,26 @@ CONTROLNET_MODELS=(
 function provisioning_start() {
     provisioning_print_header
     provisioning_get_apt_packages
-    provisioning_get_extensions
+    provisioning_get_nodes
     provisioning_get_pip_packages
     provisioning_get_files \
-        "${A1111_DIR}/models/Stable-diffusion" \
+        "${COMFYUI_DIR}/models/checkpoints" \
         "${CHECKPOINT_MODELS[@]}"
-
-    
-    # Avoid git errors because we run as root but files are owned by 'user'
-    export GIT_CONFIG_GLOBAL=/tmp/temporary-git-config
-    git config --file $GIT_CONFIG_GLOBAL --add safe.directory '*'
-
-    # Start and exit because webui will probably require a restart
-    cd "${A1111_DIR}"
-    LD_PRELOAD=libtcmalloc_minimal.so.4 \
-        python launch.py \
-            --skip-python-version-check \
-            --no-download-sd-model \
-            --do-not-download-clip \
-            --no-half \
-            --port 11404 \
-            --exit
-
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/unet" \
+        "${UNET_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/lora" \
+        "${LORA_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/controlnet" \
+        "${CONTROLNET_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/vae" \
+        "${VAE_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/esrgan" \
+        "${ESRGAN_MODELS[@]}"
     provisioning_print_end
 }
 
@@ -76,13 +84,25 @@ function provisioning_get_pip_packages() {
     fi
 }
 
-function provisioning_get_extensions() {
-    for repo in "${EXTENSIONS[@]}"; do
+function provisioning_get_nodes() {
+    for repo in "${NODES[@]}"; do
         dir="${repo##*/}"
-        path="${A1111_DIR}/extensions/${dir}"
-        if [[ ! -d $path ]]; then
-            printf "Downloading extension: %s...\n" "${repo}"
+        path="${COMFYUI_DIR}custom_nodes/${dir}"
+        requirements="${path}/requirements.txt"
+        if [[ -d $path ]]; then
+            if [[ ${AUTO_UPDATE,,} != "false" ]]; then
+                printf "Updating node: %s...\n" "${repo}"
+                ( cd "$path" && git pull )
+                if [[ -e $requirements ]]; then
+                   pip install --no-cache-dir -r "$requirements"
+                fi
+            fi
+        else
+            printf "Downloading node: %s...\n" "${repo}"
             git clone "${repo}" "${path}" --recursive
+            if [[ -e $requirements ]]; then
+                pip install --no-cache-dir -r "${requirements}"
+            fi
         fi
     done
 }
