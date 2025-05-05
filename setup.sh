@@ -21,7 +21,8 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/mt_shioriko_mifune.safetensors"
+    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/shioriko32-11.safetensors"
+    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/shioriko32.safetensors"
 )
 
 VAE_MODELS=(
