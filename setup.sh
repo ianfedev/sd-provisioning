@@ -20,7 +20,7 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-"https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/mifuneratio.safetensors"
+    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/mifuneratio.safetensors"
 )
 
 VAE_MODELS=(
@@ -31,6 +31,10 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
+)
+
+EXTENSIONS=(
+    "https://github.com/hako-mikan/sd-webui-regional-prompter"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
