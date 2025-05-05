@@ -14,6 +14,7 @@ PIP_PACKAGES=(
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/Laxhar/noobai-XL-1.1/resolve/main/NoobAI-XL-v1.1.safetensors"
+    "https://huggingface.co/Laxhar/noobai-XL-Vpred-1.0/resolve/main/NoobAI-XL-Vpred-v1.0.safetensors"
 )
 
 UNET_MODELS=(
