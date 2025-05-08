@@ -35,6 +35,7 @@ CONTROLNET_MODELS=(
 
 EXTENSIONS=(
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
+    "https://github.com/Mikubill/sd-webui-controlnet"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
