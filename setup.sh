@@ -31,6 +31,7 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
+    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/noobIPAMARK1_mark1.safetensors"
 )
 
 EXTENSIONS=(
