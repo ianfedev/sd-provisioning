@@ -38,6 +38,7 @@ EXTENSIONS=(
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
     "https://github.com/Mikubill/sd-webui-controlnet"
     "https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor"
+    "https://github.com/continue-revolution/sd-webui-animatediff"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
