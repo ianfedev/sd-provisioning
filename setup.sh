@@ -14,6 +14,7 @@ PIP_PACKAGES=(
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/Laxhar/noobai-XL-Vpred-1.0/resolve/main/NoobAI-XL-Vpred-v1.0.safetensors"
+    "https://huggingface.co/Panchovix/noobai-XL-VPred-cyberfixv2-perpendicularcyberfixv2/resolve/main/NoobAI-XL-Vpred-v1.0-cyberfix-v2.safetensors"
 )
 
 UNET_MODELS=(
@@ -35,11 +36,16 @@ CONTROLNET_MODELS=(
     "https://huggingface.co/xinsir/controlnet-canny-sdxl-1.0/resolve/main/diffusion_pytorch_model_V2.safetensors"
 )
 
+UPSCALE_MODELS=(
+    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/4xNomosUni_span_multijpg.pth"
+)
+
 EXTENSIONS=(
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
     "https://github.com/Mikubill/sd-webui-controlnet"
     "https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor"
     "https://github.com/continue-revolution/sd-webui-animatediff"
+    "https://github.com/Bing-su/adetailer"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
@@ -52,6 +58,9 @@ function provisioning_start() {
     provisioning_get_files \
         "${A1111_DIR}/models/Stable-diffusion" \
         "${CHECKPOINT_MODELS[@]}"
+    provisioning_get_files \
+        "${A1111_DIR}/models/upscale_models" \
+        "${UPSCALE_MODELS[@]}"
 
     
     # Avoid git errors because we run as root but files are owned by 'user'
