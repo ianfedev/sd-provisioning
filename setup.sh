@@ -21,7 +21,8 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/mt_shioriko_mifune.safetensors"
+  "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/mt_shioriko_mifune.safetensors"
+  "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Koto-Umi-Riko-Shizu-Setsu-LLAS-NoobAIXLV11-V1.safetensors"
 )
 
 VAE_MODELS=(
@@ -61,6 +62,9 @@ function provisioning_start() {
     provisioning_get_files \
         "${A1111_DIR}/models/upscale_models" \
         "${UPSCALE_MODELS[@]}"
+        provisioning_get_files \
+    "${A1111_DIR}/models/Lora" \
+    "${LORA_MODELS[@]}"
 
     
     # Avoid git errors because we run as root but files are owned by 'user'
