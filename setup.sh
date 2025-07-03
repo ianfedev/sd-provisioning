@@ -21,8 +21,8 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-  "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/mt_shioriko_mifune.safetensors"
   "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Koto-Umi-Riko-Shizu-Setsu-LLAS-NoobAIXLV11-V1.safetensors"
+  "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Eye_Enhancer.safetensors"
 )
 
 VAE_MODELS=(
@@ -45,8 +45,12 @@ EXTENSIONS=(
     "https://github.com/hako-mikan/sd-webui-regional-prompter"
     "https://github.com/Mikubill/sd-webui-controlnet"
     "https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor"
-    "https://github.com/continue-revolution/sd-webui-animatediff"
     "https://github.com/Bing-su/adetailer"
+)
+
+AD_DETAILER_MODEL=(
+    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Eyes.pt"
+    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/99coins_anime_girl_face_m_seg.pt"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
@@ -60,11 +64,12 @@ function provisioning_start() {
         "${A1111_DIR}/models/Stable-diffusion" \
         "${CHECKPOINT_MODELS[@]}"
     provisioning_get_files \
-        "${A1111_DIR}/models/upscale_models" \
+        "${A1111_DIR}/models/ESRGAN" \
         "${UPSCALE_MODELS[@]}"
         provisioning_get_files \
     "${A1111_DIR}/models/Lora" \
     "${LORA_MODELS[@]}"
+    provisioning_download "$AD_DETAILER_MODEL" "${A1111_DIR}/models/adetailer"
 
     
     # Avoid git errors because we run as root but files are owned by 'user'
