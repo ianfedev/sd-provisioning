@@ -52,6 +52,7 @@ AD_DETAILER_MODEL=(
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Eyes.pt"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/99coins_anime_girl_face_m_seg.pt"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/PitHandDetailer-v2-Test-v9c.pt"
+    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/unwantedV10x.pt"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
