@@ -13,8 +13,8 @@ PIP_PACKAGES=(
 )
 
 CHECKPOINT_MODELS=(
-    "https://huggingface.co/Laxhar/noobai-XL-Vpred-1.0/resolve/main/NoobAI-XL-Vpred-v1.0.safetensors"
     "https://huggingface.co/Panchovix/noobai-XL-VPred-cyberfixv2-perpendicularcyberfixv2/resolve/main/NoobAI-XL-Vpred-v1.0-cyberfix-v2.safetensors"
+    "https://huggingface.co/MomlessTomato/chika-takami/resolve/main/id_chika_takami_NAI_v1.0_VPred.safetensors"
 )
 
 UNET_MODELS=(
@@ -22,7 +22,6 @@ UNET_MODELS=(
 
 LORA_MODELS=(
   "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Koto-Umi-Riko-Shizu-Setsu-LLAS-NoobAIXLV11-V1.safetensors"
-  "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Eye_Enhancer.safetensors"
 )
 
 VAE_MODELS=(
@@ -35,6 +34,7 @@ ESRGAN_MODELS=(
 CONTROLNET_MODELS=(
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/noobIPAMARK1_mark1.safetensors"
     "https://huggingface.co/xinsir/controlnet-canny-sdxl-1.0/resolve/main/diffusion_pytorch_model_V2.safetensors"
+    "https://huggingface.co/SargeZT/t2i-adapter-sdxl-multi/resolve/main/color/diffusion_pytorch_model.bin"
 )
 
 UPSCALE_MODELS=(
@@ -51,6 +51,7 @@ EXTENSIONS=(
 AD_DETAILER_MODEL=(
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Eyes.pt"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/99coins_anime_girl_face_m_seg.pt"
+    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/PitHandDetailer-v2-Test-v9c.pt"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
@@ -70,6 +71,7 @@ function provisioning_start() {
     "${A1111_DIR}/models/Lora" \
     "${LORA_MODELS[@]}"
     provisioning_download "$AD_DETAILER_MODEL" "${A1111_DIR}/models/adetailer"
+    provisioning_download "$CONTROLNET_MODELS" "${A1111_DIR}/models/ControlNet"
 
     
     # Avoid git errors because we run as root but files are owned by 'user'
