@@ -8,28 +8,24 @@ APT_PACKAGES=(
     #"package-2"
 )
 
-PIP_PACKAGES=(
-
-)
+PIP_PACKAGES=()
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/Panchovix/noobai-XL-VPred-cyberfixv2-perpendicularcyberfixv2/resolve/main/NoobAI-XL-Vpred-v1.0-cyberfix-v2.safetensors"
+)
+
+UNET_MODELS=()
+
+LORA_MODELS=(
+    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Koto-Umi-Riko-Shizu-Setsu-LLAS-NoobAIXLV11-V1.safetensors"
     "https://huggingface.co/MomlessTomato/chika-takami/resolve/main/id_chika_takami_NAI_v1.0_VPred.safetensors"
 )
 
-UNET_MODELS=(
-)
-
-LORA_MODELS=(
-  "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Koto-Umi-Riko-Shizu-Setsu-LLAS-NoobAIXLV11-V1.safetensors"
-)
-
 VAE_MODELS=(
-"https://huggingface.co/Laxhar/noobai-XL-Vpred-1.0/resolve/main/vae/diffusion_pytorch_model.safetensors"
+    "https://huggingface.co/Laxhar/noobai-XL-Vpred-1.0/resolve/main/vae/diffusion_pytorch_model.safetensors"
 )
 
-ESRGAN_MODELS=(
-)
+ESRGAN_MODELS=()
 
 CONTROLNET_MODELS=(
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/noobIPAMARK1_mark1.safetensors"
@@ -62,19 +58,12 @@ function provisioning_start() {
     provisioning_get_apt_packages
     provisioning_get_extensions
     provisioning_get_pip_packages
-    provisioning_get_files \
-        "${A1111_DIR}/models/Stable-diffusion" \
-        "${CHECKPOINT_MODELS[@]}"
-    provisioning_get_files \
-        "${A1111_DIR}/models/ESRGAN" \
-        "${UPSCALE_MODELS[@]}"
-        provisioning_get_files \
-    "${A1111_DIR}/models/Lora" \
-    "${LORA_MODELS[@]}"
-    provisioning_get_files "$AD_DETAILER_MODEL" "${A1111_DIR}/models/adetailer"
-    provisioning_get_files "$CONTROLNET_MODELS" "${A1111_DIR}/models/ControlNet"
+    provisioning_get_files "${A1111_DIR}/models/Stable-diffusion" "${CHECKPOINT_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/ESRGAN" "${UPSCALE_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/Lora" "${LORA_MODELS[@]}"
+    provisioning_get_files "${A1111_DIR}/models/adetailer" "${AD_DETAILER_MODEL[@]}"
+    provisioning_get_files "${A1111_DIR}/models/ControlNet" "${CONTROLNET_MODELS[@]}"
 
-    
     # Avoid git errors because we run as root but files are owned by 'user'
     export GIT_CONFIG_GLOBAL=/tmp/temporary-git-config
     git config --file $GIT_CONFIG_GLOBAL --add safe.directory '*'
@@ -95,14 +84,14 @@ function provisioning_start() {
 }
 
 function provisioning_get_apt_packages() {
-    if [[ -n $APT_PACKAGES ]]; then
-            sudo $APT_INSTALL ${APT_PACKAGES[@]}
+    if [[ -n ${APT_PACKAGES[@]} ]]; then
+        sudo $APT_INSTALL ${APT_PACKAGES[@]}
     fi
 }
 
 function provisioning_get_pip_packages() {
-    if [[ -n $PIP_PACKAGES ]]; then
-            pip install --no-cache-dir ${PIP_PACKAGES[@]}
+    if [[ -n ${PIP_PACKAGES[@]} ]]; then
+        pip install --no-cache-dir ${PIP_PACKAGES[@]}
     fi
 }
 
@@ -118,8 +107,8 @@ function provisioning_get_extensions() {
 }
 
 function provisioning_get_files() {
-    if [[ -z $2 ]]; then return 1; fi
-    
+    if [[ $# -lt 2 ]]; then return 1; fi
+
     dir="$1"
     mkdir -p "$dir"
     shift
@@ -148,7 +137,6 @@ function provisioning_has_valid_hf_token() {
         -H "Authorization: Bearer $HF_TOKEN" \
         -H "Content-Type: application/json")
 
-    # Check if the token is valid
     if [ "$response" -eq 200 ]; then
         return 0
     else
@@ -164,7 +152,6 @@ function provisioning_has_valid_civitai_token() {
         -H "Authorization: Bearer $CIVITAI_TOKEN" \
         -H "Content-Type: application/json")
 
-    # Check if the token is valid
     if [ "$response" -eq 200 ]; then
         return 0
     else
@@ -172,22 +159,20 @@ function provisioning_has_valid_civitai_token() {
     fi
 }
 
-# Download from $1 URL to $2 file path
 function provisioning_download() {
     if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
         auth_token="$HF_TOKEN"
-    elif 
-        [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
+    elif [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
         auth_token="$CIVITAI_TOKEN"
     fi
-    if [[ -n $auth_token ]];then
+
+    if [[ -n $auth_token ]]; then
         wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
     else
         wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
     fi
 }
 
-# Allow user to disable provisioning if they started with a script they didn't want
 if [[ ! -f /.noprovisioning ]]; then
     provisioning_start
 fi
