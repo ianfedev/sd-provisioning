@@ -28,8 +28,6 @@ VAE_MODELS=(
 ESRGAN_MODELS=()
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/noobIPAMARK1_mark1.safetensors"
-    "https://huggingface.co/xinsir/controlnet-canny-sdxl-1.0/resolve/main/diffusion_pytorch_model_V2.safetensors"
     "https://huggingface.co/SargeZT/t2i-adapter-sdxl-multi/resolve/main/color/diffusion_pytorch_model.bin"
 )
 
@@ -46,9 +44,7 @@ EXTENSIONS=(
 
 AD_DETAILER_MODEL=(
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Eyes.pt"
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/99coins_anime_girl_face_m_seg.pt"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/PitHandDetailer-v2-Test-v9c.pt"
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/unwantedV10x.pt"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
