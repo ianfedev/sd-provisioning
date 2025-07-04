@@ -71,8 +71,8 @@ function provisioning_start() {
         provisioning_get_files \
     "${A1111_DIR}/models/Lora" \
     "${LORA_MODELS[@]}"
-    provisioning_download "$AD_DETAILER_MODEL" "${A1111_DIR}/models/adetailer"
-    provisioning_download "$CONTROLNET_MODELS" "${A1111_DIR}/models/ControlNet"
+    provisioning_get_files "$AD_DETAILER_MODEL" "${A1111_DIR}/models/adetailer"
+    provisioning_get_files "$CONTROLNET_MODELS" "${A1111_DIR}/models/ControlNet"
 
     
     # Avoid git errors because we run as root but files are owned by 'user'
