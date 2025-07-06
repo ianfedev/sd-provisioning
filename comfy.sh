@@ -46,7 +46,7 @@ VAE_MODELS=(
   "https://huggingface.co/Laxhar/noobai-XL-Vpred-1.0/resolve/main/vae/diffusion_pytorch_model.safetensors"
 )
 
-ESRGAN_MODELS=(
+UPSCALE_MODELS=(
   "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/4xNomosUni_span_multijpg.pth"
 )
 
@@ -76,8 +76,8 @@ function provisioning_start() {
         "${COMFYUI_DIR}/models/vae" \
         "${VAE_MODELS[@]}"
     provisioning_get_files \
-        "${COMFYUI_DIR}/models/esrgan" \
-        "${ESRGAN_MODELS[@]}"
+        "${COMFYUI_DIR}/models/upscale_models" \
+        "${UPSCALE_MODELS[@]}"
     
     provisioning_get_files \
         "${COMFYUI_DIR}/ComfyUI/custom_nodes/ComfyUI-Manager/packs" \
