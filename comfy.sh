@@ -23,7 +23,6 @@ NODES=(
 CUSTOM_NODES=(
     "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/ltdrdata/ComfyUI-Manager"
-    "https://github.com/80sVectorz/ComfyUI-Static-Primitives"
 )
 
 WORKFLOWS=(
