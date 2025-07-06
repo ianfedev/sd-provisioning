@@ -17,8 +17,11 @@ PIP_PACKAGES=(
 
 NODES=(
   "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
-    "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/cubiq/ComfyUI_essentials"
+)
+
+CUSTOM_NODES=(
+    "https://github.com/ltdrdata/ComfyUI-Manager"
 )
 
 WORKFLOWS=(
@@ -74,6 +77,10 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    
+    provisioning_get_files \
+        "${COMFYUI_DIR}/ComfyUI/custom_nodes/ComfyUI-Manager/packs" \
+        "${CUSTOM_NODES[@]}"
     provisioning_print_end
 }
 
