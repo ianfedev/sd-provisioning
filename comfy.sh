@@ -21,6 +21,7 @@ NODES=(
 )
 
 CUSTOM_NODES=(
+    "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/ltdrdata/ComfyUI-Manager"
 )
 
