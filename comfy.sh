@@ -53,6 +53,11 @@ UPSCALE_MODELS=(
 CONTROLNET_MODELS=(
 )
 
+ULTRALYTICS_BBOX_MODELS=(
+  "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Eyes.pt"
+  "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/PitHandDetailer-v2-Test-v9c.pt"
+)
+
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
@@ -78,11 +83,9 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/upscale_models" \
         "${UPSCALE_MODELS[@]}"
-    
     provisioning_get_files \
-        "${COMFYUI_DIR}/ComfyUI/custom_nodes/ComfyUI-Manager/packs" \
-        "${CUSTOM_NODES[@]}"
-    provisioning_print_end
+        "${COMFYUI_DIR}/models/ultralytics/bbox" \
+        "${ULTRALYTICS_BBOX_MODELS[@]}"
 }
 
 function provisioning_get_apt_packages() {
