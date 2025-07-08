@@ -11,6 +11,7 @@ APT_PACKAGES=(
 PIP_PACKAGES=()
 
 CHECKPOINT_MODELS=(
+    "https://huggingface.co/Laxhar/noobai-XL-Vpred-1.0/resolve/main/NoobAI-XL-Vpred-v1.0.safetensors"
     "https://huggingface.co/Panchovix/noobai-XL-VPred-cyberfixv2-perpendicularcyberfixv2/resolve/main/NoobAI-XL-Vpred-v1.0-cyberfix-v2.safetensors"
 )
 
