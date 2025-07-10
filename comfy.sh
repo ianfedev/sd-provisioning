@@ -52,6 +52,7 @@ UPSCALE_MODELS=(
 )
 
 CONTROLNET_MODELS=(
+    "https://huggingface.co/xinsir/controlnet-tile-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors"
 )
 
 ULTRALYTICS_BBOX_MODELS=(
