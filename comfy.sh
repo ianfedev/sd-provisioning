@@ -61,8 +61,7 @@ ULTRALYTICS_BBOX_MODELS=(
 )
 
 IPADAPTER_MODELS=(
-    "https://huggingface.co/bdsqlsz/qinglong_controlnet-lllite/resolve/main/bdsqlsz_controlllite_xl_t2i-adapter_color_shuffle.safetensors"
-    "https://huggingface.co/SargeZT/t2i-adapter-sdxl-multi/resolve/main/color/diffusion_pytorch_model.bin"
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl.safetensors"
 )
 
 CLIPVISION_MODELS=(
