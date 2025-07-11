@@ -53,13 +53,20 @@ UPSCALE_MODELS=(
 )
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/bdsqlsz/qinglong_controlnet-lllite/resolve/main/bdsqlsz_controlllite_xl_t2i-adapter_color_shuffle.safetensors"
-    "https://huggingface.co/SargeZT/t2i-adapter-sdxl-multi/resolve/main/color/diffusion_pytorch_model.bin"
 )
 
 ULTRALYTICS_BBOX_MODELS=(
   "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Eyes.pt"
   "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/PitHandDetailer-v2-Test-v9c.pt"
+)
+
+IPADAPTER_MODELS=(
+    "https://huggingface.co/bdsqlsz/qinglong_controlnet-lllite/resolve/main/bdsqlsz_controlllite_xl_t2i-adapter_color_shuffle.safetensors"
+    "https://huggingface.co/SargeZT/t2i-adapter-sdxl-multi/resolve/main/color/diffusion_pytorch_model.bin"
+)
+
+CLIPVISION_MODELS=(
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
@@ -90,6 +97,12 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/ultralytics/bbox" \
         "${ULTRALYTICS_BBOX_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/ipadapter" \
+        "${IPADAPTER_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/clip_vision" \
+        "${CLIPVISION_MODELS[@]}"
 }
 
 function provisioning_get_apt_packages() {
