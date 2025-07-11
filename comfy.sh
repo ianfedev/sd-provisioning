@@ -52,7 +52,8 @@ UPSCALE_MODELS=(
 )
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/xinsir/controlnet-tile-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors"
+    "https://huggingface.co/bdsqlsz/qinglong_controlnet-lllite/resolve/main/bdsqlsz_controlllite_xl_t2i-adapter_color_shuffle.safetensors"
+    "https://huggingface.co/SargeZT/t2i-adapter-sdxl-multi/resolve/main/color/diffusion_pytorch_model.bin"
 )
 
 ULTRALYTICS_BBOX_MODELS=(
