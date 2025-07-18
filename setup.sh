@@ -41,7 +41,7 @@ EXTENSIONS=(
     "https://github.com/Mikubill/sd-webui-controlnet"
     "https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor"
     "https://github.com/Bing-su/adetailer"
-    "https://github.com/ilian6806/stable-diffusion-webui-state"
+    "https://github.com/ljleb/sd-webui-freeu"
 )
 
 AD_DETAILER_MODEL=(
