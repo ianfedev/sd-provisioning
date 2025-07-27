@@ -39,7 +39,7 @@ UNET_MODELS=(
 
 LORA_MODELS=(
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Koto-Umi-Riko-Shizu-Setsu-LLAS-NoobAIXLV11-V1.safetensors"
-    "https://huggingface.co/MomlessTomato/riko-sakurauchi/resolve/main/id_riko_sakurauchi_NAI_v1.0_VPred.safetensors"
+    "https://huggingface.co/MomlessTomato/mari-ohara/resolve/main/id_mari_ohara_NAI_VPred_v1.0.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Eye_Enhancer.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/dramatic_light.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/backlighting_il_2_d16.safetensors"
