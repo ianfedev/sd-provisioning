@@ -12,36 +12,26 @@ PIP_PACKAGES=()
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/Laxhar/noobai-XL-Vpred-1.0/resolve/main/NoobAI-XL-Vpred-v1.0.safetensors"
-    "https://huggingface.co/Panchovix/noobai-XL-VPred-cyberfixv2-perpendicularcyberfixv2/resolve/main/NoobAI-XL-Vpred-v1.0-cyberfix-v2.safetensors"
 )
 
 UNET_MODELS=()
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Koto-Umi-Riko-Shizu-Setsu-LLAS-NoobAIXLV11-V1.safetensors"
-    "https://huggingface.co/MomlessTomato/chika-takami/resolve/main/id_chika_takami_NAI_v1.0_VPred.safetensors"
 )
 
 VAE_MODELS=(
-    "https://huggingface.co/Laxhar/noobai-XL-Vpred-1.0/resolve/main/vae/diffusion_pytorch_model.safetensors"
 )
 
 ESRGAN_MODELS=()
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/SargeZT/t2i-adapter-sdxl-multi/resolve/main/color/diffusion_pytorch_model.bin"
 )
 
 UPSCALE_MODELS=(
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/4xNomosUni_span_multijpg.pth"
 )
 
 EXTENSIONS=(
-    "https://github.com/hako-mikan/sd-webui-regional-prompter"
-    "https://github.com/Mikubill/sd-webui-controlnet"
     "https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor"
-    "https://github.com/Bing-su/adetailer"
-    "https://github.com/ljleb/sd-webui-freeu"
 )
 
 AD_DETAILER_MODEL=(
