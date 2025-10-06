@@ -42,8 +42,11 @@ LORA_MODELS=(
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/dramatic_light.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/backlighting_il_2_d16.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/lightingSlider.safetensors"
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/lazyhand.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/pss.safetensors"
+)
+
+EMBED_MODELS=(
+    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/lazyhand.safetensors"
 )
 
 VAE_MODELS=(
@@ -101,6 +104,9 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/ipadapter" \
         "${IPADAPTER_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/embeddings" \
+        "${EMBED_MODELS[@]}"
     provisioning_get_files \
         "${COMFYUI_DIR}/models/clip_vision" \
         "${CLIPVISION_MODELS[@]}"
