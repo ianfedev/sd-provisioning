@@ -38,11 +38,12 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/hanamaru-kunikida/resolve/main/aqkunhan_NAI_v1.0_VPred.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Eye_Enhancer.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/dramatic_light.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/backlighting_il_2_d16.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/lightingSlider.safetensors"
+    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/lazyhand.safetensors"
+    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/pss.safetensors"
 )
 
 VAE_MODELS=(
