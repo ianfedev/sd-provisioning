@@ -42,9 +42,8 @@ LORA_MODELS=(
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/pss.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/dramatic_light.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/backlighting_il_2_d16.safetensors"
-    "https://huggingface.co/MomlessTomato/alisa-mikhailovna/resolve/main/exmikaly_NAI_v1.0_VPred.safetensors"
+    "https://huggingface.co/MomlessTomato/alisa-mikhailovna/resolve/main/exmikaly_v2_NAI_v1.0_VPred.safetensors"
     "https://huggingface.co/MomlessTomato/dia-kurosawa/resolve/main/aqkurdia_NAI_v1.0_VPred.safetensors"
-    "https://huggingface.co/MomlessTomato/ruby-kurosawa/resolve/main/aqkurrub_NAI_v1.0_VPred.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/lines.safetensors"
 )
 
