@@ -42,7 +42,7 @@ LORA_MODELS=(
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/pss.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/dramatic_light.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/backlighting_il_2_d16.safetensors"
-    "https://huggingface.co/MomlessTomato/dia-kurosawa/resolve/main/aqkurdia_NAI_v1.0_VPred.safetensors"
+    "https://huggingface.co/MomlessTomato/maki-nishikino/resolve/main/munismak_NAI_v1.0_VPred.safetensors"
     "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/lines.safetensors"
 )
 
