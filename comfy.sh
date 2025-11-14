@@ -30,48 +30,43 @@ WORKFLOWS=(
 )
 
 CHECKPOINT_MODELS=(
-    "https://huggingface.co/Panchovix/noobai-XL-VPred-cyberfixv2-perpendicularcyberfixv2/resolve/main/NoobAI-XL-Vpred-v1.0-cyberfix-v2.safetensors"
-    "https://huggingface.co/Laxhar/noobai-XL-Vpred-1.0/resolve/main/NoobAI-XL-Vpred-v1.0.safetensors"
+    "https://storageapi.flockstore.co/idols/NoobAI-XL-Vpred-v1.0-cyberfix-v2.safetensors"
+    "https://storageapi.flockstore.co/idols/NoobAI-XL-Vpred-v1.0.safetensors"
 )
 
 UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/lightingSlider.safetensors"
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/pss.safetensors"
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/dramatic_light.safetensors"
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/backlighting_il_2_d16.safetensors"
-    "https://huggingface.co/MomlessTomato/maki-nishikino/resolve/main/munismak_NAI_v1.0_VPred.safetensors"
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/lines.safetensors"
+    "https://storageapi.flockstore.co/idols/lightingSlider.safetensors"
+    "https://storageapi.flockstore.co/idols/pss.safetensors"
+    "https://storageapi.flockstore.co/idols/dramatic_light.safetensors"
+    "https://storageapi.flockstore.co/idols/backlighting_il_2_d16.safetensors"
+    "https://storageapi.flockstore.co/idols/lines.safetensors"
 )
 
 EMBED_MODELS=(
-    "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/lazyhand.safetensors"
+    "https://storageapi.flockstore.co/idols/lazyhand.safetensors"
 )
 
 VAE_MODELS=(
-  "https://huggingface.co/Laxhar/noobai-XL-Vpred-1.0/resolve/main/vae/diffusion_pytorch_model.safetensors"
+  "https://storageapi.flockstore.co/idols/diffusion_pytorch_model.safetensors"
 )
 
 UPSCALE_MODELS=(
-  "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/4xNomosUni_span_multijpg.pth"
+  "https://storageapi.flockstore.co/idols/4xNomosUni_span_multijpg.pth"
 )
 
 CONTROLNET_MODELS=(
 )
 
 ULTRALYTICS_BBOX_MODELS=(
-  "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/Eyes.pt"
-  "https://huggingface.co/MomlessTomato/nijigasaki/resolve/main/PitHandDetailer-v2-Test-v9c.pt"
 )
 
 IPADAPTER_MODELS=(
-    "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl.safetensors"
 )
 
 CLIPVISION_MODELS=(
-    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
