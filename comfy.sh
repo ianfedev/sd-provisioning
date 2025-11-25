@@ -30,9 +30,9 @@ WORKFLOWS=(
 )
 
 CHECKPOINT_MODELS=(
-    #"https://storageapi.flockstore.co/idols/NoobAI-XL-Vpred-v1.0-cyberfix-v2.safetensors"
-    #"https://storageapi.flockstore.co/idols/NoobAI-XL-Vpred-v1.0.safetensors"
-    "https://storageapi.flockstore.co/idols/waiIllustriousSDXL_v150.safetensors"
+    "https://storageapi.flockstore.co/idols/NoobAI-XL-Vpred-v1.0-cyberfix-v2.safetensors"
+    "https://storageapi.flockstore.co/idols/NoobAI-XL-Vpred-v1.0.safetensors"
+    #"https://storageapi.flockstore.co/idols/waiIllustriousSDXL_v150.safetensors"
 )
 
 UNET_MODELS=(
